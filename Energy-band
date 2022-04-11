@@ -1,3 +1,4 @@
+
 Program workfile
     Implicit none
 ! some parameters    
@@ -52,8 +53,7 @@ subroutine eigen(kx,ky,fW)
     complex(8) :: m1 , m2
     complex(8) :: f1 , f2
 ! variables of the Eigenvalue and Eigenvector of the Hamiltonian matrix
-    complex(8) :: H(N,N)
-    real(8) :: W(N) 
+    complex(8) :: H(N,N) 
  
     m1 = dot_product(a1 , k(:,kx,ky))
     m2 = dot_product(a2 , k(:,kx,ky))
@@ -65,8 +65,7 @@ subroutine eigen(kx,ky,fW)
             t0, t2, t1*f1,t0, t0, t2, &
             t0, t0, t0, t0, t0, t1*f1,&
             t0, t3, t0, t2, t1*f2, t0],[6 , 6])
-    call myzheev(N,W,H)
-    fw = w
+    call myzheev(N,fW,H)
 endsubroutine
 
 ! eigenvalue of the zheev
