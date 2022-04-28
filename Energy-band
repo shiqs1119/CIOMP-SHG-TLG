@@ -3,7 +3,7 @@ Program workfile
     Implicit none
 ! some parameters    
     complex(8) , parameter :: i = (0.0, 1.0) , t0 = (0.0,0.0)
-    real(8) , parameter :: PI = acos(-1.0) , a0 = 1.42D-010
+    real(8) , parameter :: PI = acos(-1.0) , a0 = 2.46D-010
     real(8) , parameter :: t1 = 3.12D0 , t2 = 0.29D0 , t3 = -0.0103D0 !expressed in eV
     real(8) , parameter :: h_bar = 1.054572663D-034 , r0 = sqrt(3.0)/3.0D0
 ! variables of the k value    
